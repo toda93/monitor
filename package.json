@@ -1,6 +1,6 @@
 {
     "name": "@azteam/monitor",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "",
     "main": "src/index.js",
     "repository": {
@@ -23,7 +23,7 @@
     },
     "homepage": "https://github.com/toda93/monitor#readme",
     "dependencies": {
-        "@azteam/http-client": "1.0.50",
+        "@azteam/http-client": "1.0.51",
         "lodash": "4.17.10",
         "systeminformation": "4.22.5"
     }
