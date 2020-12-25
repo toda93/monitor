@@ -5,9 +5,13 @@ import HttpClient from '@azteam/http-client';
 class Monitor {
     static async getExternalIP() {
         if (!this.ip) {
-            const client = new HttpClient();
-            const ip = await client.responseText().get('http://ipv4bot.whatismyipaddress.com/');
-            this.ip = ip.trim();
+            try {
+                const client = new HttpClient();
+                const ip = await client.responseText().get('http://ipv4bot.whatismyipaddress.com/');
+                this.ip = ip.trim();
+            } catch {
+                return null;
+            }
         }
         return this.ip;
     }
